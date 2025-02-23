@@ -2,13 +2,16 @@ import { Route, Routes } from 'react-router';
 import { Authentication } from './pages/Authentication';
 import { Dashboard } from './pages/Dashboard';
 import { UserProvider } from './context/user-context';
+import { Layout } from './pages/layout';
 
 export default function Router() {
     return (
         <UserProvider>
             <Routes>
                 <Route path="/" element={<Authentication />} />
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route element={<Layout />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Route>
             </Routes>
         </UserProvider>
     );

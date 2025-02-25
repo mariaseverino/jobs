@@ -1,11 +1,9 @@
-import { TrendingUp } from 'lucide-react';
 import { CartesianGrid, Line, LineChart, XAxis } from 'recharts';
 
 import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from '../ui/card';
@@ -16,17 +14,17 @@ import {
     ChartTooltipContent,
 } from '../ui/chart';
 const chartData = [
-    { month: 'January', desktop: 186 },
-    { month: 'February', desktop: 305 },
-    { month: 'March', desktop: 237 },
-    { month: 'April', desktop: 73 },
-    { month: 'May', desktop: 209 },
-    { month: 'June', desktop: 214 },
+    { month: 'Setembro', desktop: 32000 },
+    { month: 'Outubro', desktop: 28500 },
+    { month: 'Novembro', desktop: 34000 },
+    { month: 'Dezembro', desktop: 73 },
+    { month: 'Janeiro', desktop: 39000 },
+    { month: 'Fevereiro', desktop: 37500 },
 ];
 
 const chartConfig = {
     desktop: {
-        label: 'Desktop',
+        label: 'Desktop2',
         color: '#013d5a',
     },
 } satisfies ChartConfig;
@@ -35,8 +33,10 @@ export function Graphic() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Line Chart</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+                <CardTitle>Faturamento Mensal - Últimos 6 Meses</CardTitle>
+                <CardDescription>
+                    Setembro 2024 - Fevereiro 2025
+                </CardDescription>
             </CardHeader>
             <CardContent>
                 <ChartContainer config={chartConfig}>
@@ -70,15 +70,6 @@ export function Graphic() {
                     </LineChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col items-start gap-2 text-sm bg-amber-600 w-10">
-                <div className="flex gap-2 font-medium leading-none">
-                    Trending up by 5.2% this month{' '}
-                    <TrendingUp className="h-4 w-4" />
-                </div>
-                <div className="leading-none text-muted-foreground">
-                    Showing total visitors for the last 6 months
-                </div>
-            </CardFooter>
         </Card>
     );
 }

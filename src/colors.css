@@ -1,4 +1,11 @@
 :root {
+    --prinary-color: #a05aff;
+    --secomdary-color: #1bcfb4;
+    --first-supporting-color: #4bcbeb;
+    --secomdary-supporting-color: #fe9496;
+    --third-supporting-color: #9e58ff;
+    --back-color: #f8f9fa;
+
     --primary-color: #ffffff;
     /* --secondary-color: #6c63ff; */
     --secondary-color: #013d5a;

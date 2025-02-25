@@ -14,7 +14,7 @@ export type User = {
     photoURL: string;
 };
 export interface UserContextType {
-    user: User | undefined;
+    user: User | null;
     login: (provider: GoogleAuthProvider | GithubAuthProvider) => void;
 }
 
@@ -36,12 +36,15 @@ export function UserProvider({ children }: UserContextProps) {
         getUserFromStorage();
     }, []);
 
-    const [user, setUser] = useState<User>();
+    const [user, setUser] = useState<User | null>(null);
     const navigate = useNavigate();
 
     async function login(provider: GoogleAuthProvider | GithubAuthProvider) {
         const userData = await signIn(provider);
-        setUser(userData);
+
+        if (userData) {
+            setUser(userData);
+        }
 
         localStorage.setItem('user', JSON.stringify(userData));
 
@@ -55,6 +58,13 @@ export function UserProvider({ children }: UserContextProps) {
     );
 }
 
-export const useUserContext = () => {
-    return useContext<UserContextType | undefined>(UserContext);
+export const useUserContext = (): UserContextType => {
+    const context = useContext(UserContext);
+
+    if (!context) {
+        throw new Error(
+            'useUserContext deve ser usado dentro de um UserProvider'
+        );
+    }
+    return context;
 };

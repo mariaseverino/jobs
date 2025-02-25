@@ -1,10 +1,13 @@
+import { Outlet } from 'react-router';
 import { SideBar } from '../components/SideBar';
 
 export function Layout() {
     return (
-        <div className="flex h-screen bg-amber-600">
+        <div className="flex h-screen bg-(--back-color)">
             <SideBar />
-            <main>conteudo</main>
+            <main className=" w-full p-6 overflow-y-auto">
+                <Outlet />
+            </main>
         </div>
     );
 }

@@ -1,0 +1,121 @@
+/* The component style is inserted here. */
+.auth_view {
+    background-color: var(--background-color);
+    height: 100vh;
+    padding: 15px 85px;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    gap: 25px;
+}
+button {
+    font-size: 16px;
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+    font-weight: 400;
+}
+.signin {
+    background-color: transparent;
+}
+.premium {
+    background-color: var(--secondary-color);
+    padding: 4px 26px;
+    border-radius: 8px;
+    color: white;
+}
+.auth_wrapper {
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.auth_card {
+    background-color: var(--primary-color);
+    width: 407px;
+    box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    height: 515px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 42px;
+    position: relative;
+}
+
+.text {
+    margin-bottom: 93px;
+    text-align: center;
+}
+.title {
+    font-size: 24px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+.message {
+    font-size: 16px;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
+.btns button {
+    height: 43px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    z-index: 1;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns span {
+    text-align: center;
+    font-size: 14px;
+}
+
+.btns button img {
+    height: 16px;
+    margin-right: 5px;
+}
+
+@media (min-width: 425px) {
+    .auth_view {
+        padding: 15px 25px;
+    }
+    .text {
+        margin-bottom: 63px;
+        text-align: center;
+    }
+    .auth_card {
+        padding: 40px 22px;
+        height: 450px;
+        width: 345px;
+    }
+}
+@media (min-width: 767px) {
+    .auth_card {
+        padding: 80px 42px;
+        height: 500px;
+        width: 407px;
+    }
+}

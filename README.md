@@ -44,7 +44,7 @@ O sistema é dividido em módulos principais:
    ```sh
    npm run storybook
    ```
-
+   
 ## 🖇️ Contribuição
 Contribuições são bem-vindas! Para contribuir:
 1. Faça um fork do repositório.
@@ -55,4 +55,3 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 📄 Licença
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-

@@ -36,13 +36,13 @@ O sistema é dividido em módulos principais:
    ```sh
    npm install
    ```
-3. Configure as variáveis de ambiente (**.env**):
-   ```sh
-   cp .env.example .env
-   ```
-4. Inicie:
+3. Inicie:
    ```sh
    npm run dev
+   ```
+4. Documentação:
+   ```sh
+   npm run storybook
    ```
 
 ## 🖇️ Contribuição

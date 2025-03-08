@@ -7,7 +7,7 @@ export function SideBar() {
         setIsSidebarOpen(!isSidebarOpen);
     }
     return (
-        <div className="flex">
+        <div className="flex z-50">
             <button
                 onClick={toggleSidebar}
                 className="sm:hidden m-5 text-(--secondary-color) size-8 fixed"
@@ -36,7 +36,7 @@ export function SideBar() {
             )}
 
             <aside
-                className={`fixed top-0 left-0 w-64 h-screen p-8 flex flex-col bg-(--primary-color) text-(--text-color-dark) md:border border-r-(--text-color) transform
+                className={`fixed top-0 left-0 w-64 h-screen p-8 flex flex-col bg-white text-(--text-color-dark) md:border border-r-(--text-color) transform
                 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
                 md:translate-x-0 md:static md:flex transition-transform duration-300`}
             >

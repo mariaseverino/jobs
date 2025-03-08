@@ -50,7 +50,7 @@ export function OngoingProjectsList() {
                 ))}
             </ul>
             <div className="text-right text-blue-500 underline">
-                <Link to={'/'}>Ver mais</Link>
+                <Link to={'/projects'}>Ver mais</Link>
             </div>
         </div>
     );

@@ -3,7 +3,6 @@ import { Card } from '../../components/Card';
 import { Graphic } from '../../components/Graphic';
 import { OngoingProjectsList } from '../../components/OngoingProjectsList';
 import { useUserContext } from '../../context/user-context';
-import './styles.css';
 
 export function Dashboard() {
     const { user } = useUserContext();
@@ -21,7 +20,7 @@ export function Dashboard() {
         <div className="mb-5">
             <div className="flex justify-between items-center mb-8 mt-8 md:mt-6">
                 <div>
-                    <h1 className="text-xl font-bold">
+                    <h1 className="text-3xl font-bold">
                         Olá, {user?.displayName}
                     </h1>
                     <p className="mt-3 ">

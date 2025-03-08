@@ -40,7 +40,7 @@ O sistema é dividido em módulos principais:
    ```sh
    npm run dev
    ```
-4. Dpcumentação:
+4. Documentação:
    ```sh
    npm run storybook
    ```
